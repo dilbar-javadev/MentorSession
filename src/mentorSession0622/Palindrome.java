@@ -9,8 +9,7 @@ public class Palindrome {
 
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
-        String words = input.nextLine();
+        String words = "aabbbbaa";
         System.out.println("If it's palindrome: " + ifPalindrome(words));
 
     }
@@ -32,10 +31,7 @@ public class Palindrome {
 
         Collections.reverse(lastHalf);
 
-        if(firstHalf.equals(lastHalf) || words.equals("") || words.equals(" ")){
-            return true;
-        }else{
-            return false;
-        }
+        return firstHalf.equals(lastHalf) || words.equals("") || words.equals(" ");
+
     }
 }
